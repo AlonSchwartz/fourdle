@@ -1,0 +1,122 @@
+<html dir="rtl" lang="he">
+<h1 mat-dialog-title> <b> איך משחקים?</b> </h1>
+<div mat-dialog-content>
+    נחשו את כל ארבעת המילים תוך תשע נסיונות או פחות.
+    כל ניחוש חייב להיות מילה בת 5 אותיות. הקש על אנטר על מנת לבדוק את תשובתך.
+    אחרי כל ניחוש, הצבע של משבצות הניחוש ישתנה בהתאם לעד כמה הניחוש קרוב למילה.
+    <hr />
+    <h3> דוגמאות</h3>
+    <table class="wordle">
+        <tr>
+            <td class="inPlace"> א </td>
+            <td class=""> ז </td>
+            <td class=""> ו </td>
+            <td class=""> ר </td>
+            <td class=""> י </td>
+        </tr>
+    </table>
+    <br>
+    האות א קיימת במילה בדיוק במקום הזה.
+    <br>
+    <br>
+    <table class="wordle">
+        <tr>
+            <td class=""> ה </td>
+            <td class=""> ת </td>
+            <td class="wrongPlace"> ר </td>
+            <td class=""> ח </td>
+            <td class=""> ב </td>
+        </tr>
+    </table>
+    <br>
+    האות ר קיימת במילה אך במקום אחר.
+    <br>
+    <br>
+    <table class="wordle">
+        <tr>
+            <td class=""> מ </td>
+            <td class=""> י </td>
+            <td class=""> ו </td>
+            <td class=""> ח </td>
+            <td class="notExists"> ד </td>
+        </tr>
+    </table>
+    <br>
+    האות ד לא קיימת במילה.
+    <br>
+    <br>
+    כאשר אתם מנחשים מילה, הניחוש שלכם נבדק מול ארבעת המילים היומיות בו זמנית.
+    <br>
+
+    <table class="wordle-demo">
+        1.
+        <tr>
+            <td class="notExists"> י </td>
+            <td class="notExists"> ה </td>
+            <td class="notExists"> ל </td>
+            <td class="notExists"> ו </td>
+            <td class="notExists"> ם </td>
+        </tr>
+    </table>
+    &nbsp;
+    <table class="wordle-demo">
+        2.
+        <tr>
+            <td class="inPlace"> י </td>
+            <td class="notExists"> ה </td>
+            <td class="notExists"> ל </td>
+            <td class="wrongPlace"> ו </td>
+            <td class="notExists"> ם </td>
+        </tr>
+    </table>
+    <br>
+    <table class="wordle-demo">
+        3.
+        <tr>
+            <td class="notExists"> י </td>
+            <td class="notExists"> ה </td>
+            <td class="inPlace"> ל </td>
+            <td class="notExists"> ו </td>
+            <td class="notExists"> ם </td>
+        </tr>
+    </table>
+
+    &nbsp;
+    <table class="wordle-demo">
+        4.
+        <tr>
+            <td class="notExists"> י </td>
+            <td class="notExists"> ה </td>
+            <td class="notExists"> ל </td>
+            <td class="notExists"> ו </td>
+            <td class="wrongPlace"> ם </td>
+        </tr>
+    </table>
+
+    <br>
+    <b>
+        עבור המילה יהלום:
+    </b>
+    <ol>
+        <li>
+            במילה הראשונה אין אף אות נכונה.
+        </li>
+        <li>
+            במילה השניה האות י קיימת במילה ונמצאת במקום הנכון, והאות ו נמצאת במילה אך במקום אחר.
+        </li>
+        <li>
+            במילה השלישית האות ל קיימת במילה ונמצאת במקום הנכון.
+        </li>
+        <li>
+            במילה הרביעית האות מ נמצאת במילה, אך במקום אחר.
+        </li>
+    </ol>
+
+    <b>שימו לב! אותיות סופיות נחשבות לאות במופע הרגיל שלהן, ולהפך. </b>
+    <br>
+    <hr />
+    המשחק יעודכן מידי יום עם מילים חדשות.
+    <br>
+    בהצלחה!
+
+</div>

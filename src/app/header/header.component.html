@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-icon>brightness_5</mat-icon>
+    <mat-slide-toggle [checked]="isChecked" color="warn" (change)="onSliderChange($event)">
+    </mat-slide-toggle>
+    <mat-icon>bedtime</mat-icon>
+    <span class="spacer"></span>
+    <span class="title"> פורדל</span>
+    <span class="spacer"></span>
+
+    <button mat-icon-button aria-label="icon-button with help center icon" (click)="openHelpDialog()"
+        onclick="this.blur()">
+        <mat-icon>help_center </mat-icon>
+    </button>
+    <button mat-icon-button aria-label="icon-button with leaderboardicon" (click)="openStatisticsDialog()"
+        onclick="this.blur()">
+        <mat-icon>leaderboard </mat-icon>
+    </button>
+
+</mat-toolbar>

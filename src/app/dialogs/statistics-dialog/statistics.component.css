@@ -1,0 +1,111 @@
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stats>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.stats-data {
+    font-size: 1.8rem;
+}
+
+.stats-name {
+    font-size: 1rem;
+}
+
+.distribution {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    justify-items: baseline !important;
+}
+
+.distribution>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end !important;
+}
+
+.dist-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2px;
+    justify-content: flex-end;
+    max-width: 57vmin;
+    min-width: 5vh;
+}
+
+.amountOfWins {
+    display: flex;
+    background-color: green;
+    max-width: 57vmin;
+    min-width: 2vh;
+    color: white;
+    padding-left: 5px;
+    animation: fill 0.5s ease-in-out;
+}
+
+.winAtTryNumber {
+    display: flex;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.share {
+    display: flex;
+    flex-direction: row;
+}
+
+.share>div {
+    display: flex;
+}
+
+.share-item {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
+
+.timer>span {
+    font-size: 1.8rem;
+}
+
+.header,
+.dist-header,
+.timer-header {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.daily-words {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.word {
+    justify-self: center;
+}
+
+.no-data {
+    align-self: center;
+}
+
+@keyframes fill {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}

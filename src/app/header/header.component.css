@@ -1,0 +1,26 @@
+.container {
+    min-width: 100%;
+    background-color: blue;
+    justify-content: center;
+    border-bottom: 5px solid green;
+}
+
+#gameName {
+    color: white;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    border-bottom: 1px solid black;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.mat-icon {
+    font-size: 1.5rem;
+}

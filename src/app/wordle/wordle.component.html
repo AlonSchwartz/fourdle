@@ -1,0 +1,7 @@
+<table class="wordle" [ngClass]="{'is-portrait': isPortrait}">
+    <tr *ngFor="let guess of guesses; let i=index ">
+        <td *ngFor="let letterObj of guess; let j = index" ngClass={{letterObj.status}}>
+            {{letterObj.letter}}
+        </td>
+    </tr>
+</table>

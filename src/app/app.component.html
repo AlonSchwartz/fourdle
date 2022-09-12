@@ -1,0 +1,29 @@
+<app-header [isChecked]="isDarkMode" (isDarkMode)="switchMode($event)"></app-header>
+<ng-content></ng-content>
+<div class="gameContainer mat-app-background">
+    <mat-grid-list cols="10" rowHeight="{{desiredHeight}}">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+            <table *ngIf="tile.text=='game'">
+                <tr>
+                    <td>
+                        <wordle [id]=0></wordle>
+                    </td>
+                    <td>
+                        <wordle [id]=1></wordle>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <wordle [id]=2></wordle>
+                    </td>
+                    <td>
+                        <wordle [id]=3></wordle>
+                    </td>
+                </tr>
+            </table>
+            <div *ngIf="tile.text=='keyboard'">
+                <app-keyboard></app-keyboard>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

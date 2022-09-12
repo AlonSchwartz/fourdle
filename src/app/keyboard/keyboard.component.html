@@ -1,0 +1,18 @@
+<table class="keyboard_container">
+    <tr class="key-row" *ngFor="let lettersRow of keyboardObject" [ngClass]="{'is-portrait': isPortrait}">
+        <td *ngFor="let key of lettersRow">
+            <button *ngIf=" key.key == 'Enter'" mat-raised-button class="enter" color="accent"
+                aria-label="icon-button with settings icon" (click)="emitKey(key)" [style.background]=defaultStyle>
+                <mat-icon>keyboard_return</mat-icon>
+            </button>
+            <button *ngIf="key.key !== 'Backspace' && key.key !== 'Enter' " mat-raised-button class="key" color="accent"
+                aria-label="icon-button with settings icon" (click)="emitKey(key)" [style.background]=key.style>
+                {{key.key}}
+            </button>
+            <button *ngIf="key.key == 'Backspace'" mat-raised-button class="delete" color="accent"
+                aria-label="icon-button with settings icon" (click)="emitKey(key)" [style.background]=defaultStyle>
+                <mat-icon>backspace</mat-icon>
+            </button>
+        </td>
+    </tr>
+</table>

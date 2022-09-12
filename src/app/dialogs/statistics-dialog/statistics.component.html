@@ -1,0 +1,78 @@
+<mat-grid-list cols="1" rowHeight=5vh>
+    <mat-grid-tile class="stats" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+        <div *ngIf="tile.text=='header'" class="header">
+            סטטיסטיקות
+        </div>
+        <div *ngIf="tile.text=='stats'" class="stats">
+            <div>
+                <span class="stats-data"> {{this.data.statistics.highestStreak}}</span>
+                <span class="stats-name"> רצף<br>
+                    שיא </span>
+            </div>
+            <div>
+                <span class="stats-data"> {{this.data.statistics.currentStreak}}</span>
+                <span class="stats-name"> רצף </span>
+            </div>
+            <div>
+                <span class="stats-data"> {{this.data.statistics.winsPercentage}}%</span>
+                <span class="stats-name"> הצלחה </span>
+            </div>
+            <div>
+                <span class="stats-data"> {{this.data.statistics.played}}</span>
+                <span class="stats-name"> משחקים </span>
+            </div>
+        </div>
+        <div *ngIf="tile.text=='dist-header'" class="dist-header">
+            <div>
+                התפלגות נצחונות
+            </div>
+        </div>
+        <div *ngIf="tile.text=='distribution'" class="distribution">
+            <div *ngFor="let guess of this.data.statistics.guessDistributionArray | slice:4:10 ; let j=index">
+                <div class="dist-item">
+                    <div class="amountOfWins" [style.width]="distWidth[j]">
+                        {{guess}}
+                    </div>
+                    <div class="winAtTryNumber">
+                        :{{j+4}}
+                    </div>
+                </div>
+            </div>
+            <div class="no-data" *ngIf="this.data.statistics.guessDistributionArray.length == 0">
+                אין נתונים
+            </div>
+        </div>
+
+        <div *ngIf="(tile.text=='daily-words') && gameEnded" class="daily-words">
+            <div *ngFor="let word of this.dailyWords; let i = index" class="word"
+                [style.color]="solvedWordles[i] ? 'green' : 'red'">
+                {{word}}
+            </div>
+        </div>
+        <div *ngIf="tile.text=='share' && gameEnded" class="share">
+
+            <div class="share-item">
+                <button mat-raised-button color="accent" [cdkCopyToClipboard]="shareText" (click)="openSnackBar()"
+                    onclick="this.blur()">העתק
+                    ללוח
+                    <mat-icon>content_copy </mat-icon>
+                </button>
+            </div>
+            <div class="share-item">
+                <button mat-raised-button color="accent" (click)="this.shareToWhatsapp()" onclick="this.blur()"
+                    data-text="share result in whatsapp mobile">
+                    שתף
+                    <mat-icon>share </mat-icon>
+                </button>
+            </div>
+        </div>
+        <div *ngIf="tile.text=='timer-header'" class="timer-header">
+            מילים חדשות בעוד
+        </div>
+        <div *ngIf="tile.text=='timer'" class="timer">
+            <span class="countdown">
+                {{countDown.hours}}:{{countDown.mins}}:{{countDown.seconds}}
+            </span>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

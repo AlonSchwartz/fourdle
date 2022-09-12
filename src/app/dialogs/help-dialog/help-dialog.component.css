@@ -1,0 +1,60 @@
+.mat-dialog-content {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wordle {
+    display: inline-block;
+    overflow: auto;
+}
+
+.wordle-demo {
+    display: inline-block;
+    overflow: auto;
+}
+
+td {
+    width: 3vh;
+    height: 3vh;
+    border: 2px solid black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.9vh;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.inPlace {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+.wrongPlace {
+    background-color: #f1cf38;
+    color: white;
+    border-color: #f1cf38;
+
+}
+
+.notExists {
+    background-color: grey;
+    color: white;
+    border-color: grey;
+}
+
+.demoArea {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.demoTd {
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 10px;
+}
+
+.mat-grid-tile {
+    justify-content: right;
+    align-items: right;
+}

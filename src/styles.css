@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+.mat-snack-bar-container {
+    max-width: 100% !important;
+    min-width: 2px !important;
+}
+
+.mat-simple-snackbar {
+    justify-content: center !important;
+}
+
+html,
+body {
+    height: 100px;
+}
+
+body {
+    margin: 0;
+    --main-background: white;
+}
+
+.mat-focus-indicator::before {
+    border: none;
+}
+
+.mat-dialog-container {
+    cursor: auto;
+}
+
+.wordNotFound {
+    background-color: brown;
+    color: white;
+}
+
+.mat-button-focus-overlay {
+    background-color: transparent !important;
+}

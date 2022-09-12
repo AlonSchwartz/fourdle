@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". . ."
+        ". results ."
+        ". keyboard ."
+}
+
+.main_game {
+    grid-area: results;
+    height: 50px;
+}
+
+.keyboard {
+    grid-area: keyboard;
+    height: 15vh;
+}
+
+td {
+    text-align: center;
+}

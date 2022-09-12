@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+
+@import "~@angular/material/theming";
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$blue-gray-palette, 50);
+$my-accent: mat.define-palette(mat.$green-palette, 900);
+$angular-warn: mat.define-palette(mat.$red-palette);
+
+$my-primary-dark: mat.define-palette(mat.$gray-palette, 900);
+$my-warn-dark: mat.define-palette(mat.$light-blue-palette, A400);
+
+$mat-theming-theme: mat-light-theme($my-primary, $my-accent, $angular-warn);
+$angular-default-theme: mat.define-light-theme((color: (primary: $my-primary,
+                accent: $my-accent,
+                warn: $angular-warn,
+            ),
+        ));
+
+@include mat.all-component-themes($angular-default-theme);
+
+$angular-dark-theme: mat.define-dark-theme((color: (primary: $my-primary-dark,
+                accent: $my-accent,
+                warn: $my-warn-dark,
+            ),
+        ));
+
+.darkMode {
+    @include mat.all-component-colors($angular-dark-theme);
+
+    .gameContainer>.mat-grid-list,
+    .gameContainer>.mat-grid-tile,
+    .gameContainer>.mat-grid-tile-content {
+        background: #303030;
+    }
+
+    .wordNotFound {
+        background-color: brown;
+        color: white;
+    }
+
+    .wordle>tr>td {
+        color: white;
+        border: 2px solid #818384
+    }
+
+    .mat-dialog-content,
+    .mat-dialog-title {
+        color: white;
+    }
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    /**/
+    /*background: mat.get-color-from-palette($my-accent, 900);*/
+    background-color: var(--main-background);
+    touch-action: manipulation;
+}
+
+html {
+    touch-action: manipulation;
+}
